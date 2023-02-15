@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Encriptador de Texto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!---- fontawesome ---->
+
+    <script
+      src="https://kit.fontawesome.com/4d63ed8f35.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!---- favicon ---->
+
+    <link
+      rel="shortcut icon"
+      href="./images/logo-faviconW.png"
+      type="image/x-icon"
+    />
+
+    <!---- fonts ---->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!---- styles ---->
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/animista.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/dark-mode.css" />
+  </head>
+
+  <body>
+
+    <!---- Main sections ---->
+
+    <main class="container">
+      <!---- Header ---->
+
+      <header class="header-btn">
+        <img src="./images/logo2.png" class="logo-title" />
+        <img src="./images/logo-blanco.png" id="logo-title_white" />
+        <h2 class="titulo-header">Encritador de Texto</h2>
+        <div class="container-social-darkMode">
+          <button class="switch-mode" id="switch-mode">
+            <span><i class="fa-solid fa-moon"></i></span>
+            <span><i class="fa-solid fa-sun"></i></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- field text sections -->
+
+      <div class="section-container-main">
+        <div class="section-text-btn">
+          <span class="alert bounce-in-top slide-in-top">
+            <img src="" class="icon-head" />
+            <img src="" class="icon-head" />
+            
+          </span>
+          <div class="text-write">
+            <textarea
+              id="inputText"
+              class="input-text"
+              type="text"
+              placeholder="Ingrese el texto aqui"
+              textarea
+            ></textarea>
+          </div>
+          <p class="text-limit">
+            No se permiten mayusculas ni acentos, ni numeros
+          </p>
+
+          <!---- Buttons sections ---->
+
+          <div class="buttons">
+            <button 
+            onclick="btnEncritar"
+            class="btn" 
+            id="encriptar" 
+            type="submit"
+            >Encriptar
+          </button>
+            <button
+              onclick="btnDesencriptar()"
+              class="btn"
+              id="desencriptar"
+              type="submit"
+            >
+              Desencriptar
+            </button>
+            <button
+              onclick="copyToClipBoard()"
+              class="btn"
+              id="copy-text"
+              type="button"
+            >Copiar</button>
+          </div>
+        </div>
+
+        <!---- input sections ---->
+
+        <div class="input-btn-content">
+          <div class="text-box disabled">
+            <p id="text-result"></p>
+          </div>
+          <div class="alert-message-box">
+            <img src="images/resulText.png" id="robot-img" class="robot" />
+            <img src="images/resulText.png" id="robot-img_dm" class="robot_dm" />
+            <p class="alert-message">Ningún mensaje fue encontrado</p>
+            <p class="alert-message2">
+              Ingresa el mensaje que desees encriptar o desencriptar.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!---- Footer ---->
+
+      <footer>
+       
+        <div class="redes-sociales">
+        <ul class="list-social">
+            <a
+            href=" https://www.facebook.com/faner.santandervilladiego/"
+            class="item-social" 
+            style="--1:#a955ff;--j:#ea51ff;">
+                <span class="icon"><i class="fa fa-facebook"></i></span>
+                <span class="titulo">Facebook</span>
+            </a>
+            <a 
+            href=" https://www.github.com//"
+            class="item-social"  
+            style="--1:#56ccf2;--j:#2f80e2;">
+                <span class="icon"><i class="fa fa-github"></i></span>
+                <span class="titulo">Github</span>
+            </a>
+            <a 
+            href=" https://wa.me/573175377544/" 
+            class="item-social"  
+            style="--1:#86be6b;--j:#1baf16;">
+                <span class="icon"><i class="fa fa-whatsapp"></i></span>
+                <span class="titulo">WhatsApp</span>
+            </a>
+            <a 
+            href=" https://www.linkedin.com/in/faner-santander-86332b208/"
+            class="item-social"  
+            style="--1:#ffa9c6;--j:#f434e2;">
+                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                <span class="titulo">LinkedIn</span>
+            </a>
+            <a 
+            href=" https://www.instagram.com/faner_stder/"
+            class="item-social" 
+            style="--1:#80ff72;--j:#5ec3d4;">
+                <span class="icon"><i class="fa fa-instagram"></i></span>
+                <span class="titulo">Instagram</span>
+            </a>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>Copyright: &nbsp;<span id="current-year"></span></p>&nbsp;
+        <a class="link" href="">Faner Santander</a>
+    </div>
+      </footer>
+    </main>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/dark-mode.js"></script>
+  </body>
+</html>
